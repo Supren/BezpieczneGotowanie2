@@ -1,0 +1,8 @@
+.results-list {
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 312px));
+  gap: 3.5rem;
+  justify-content: center;
+}

@@ -1,0 +1,128 @@
+#app {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.navbar {
+  justify-content: flex-start;
+}
+
+#nav {
+  height: 90px;
+  transition: ease-in-out 0.3s;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  background-color: white;
+  z-index: 101;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: #e8e8e8 solid 1px;
+  padding: 0px 5%;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #e35c4a;
+    }
+  }
+  #logout {
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+  }
+}
+
+#logo {
+  height: 80px;
+  padding: 0px;
+}
+#hamburger {
+  display: none;
+}
+#toggle {
+  display: none;
+}
+#logo-bottom {
+  display: none;
+}
+
+@media only screen and (max-width: 679px) {
+  #nav {
+    height: 90px;
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      top: 60px;
+      right: -100%;
+      text-align: center;
+      display: block;
+      transition: all 0.5s;
+    }
+    li {
+      padding: 10px;
+    }
+    .divider {
+      border-bottom: #e8e8e8 solid 1px;
+    }
+  }
+  #logo {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  #toggle {
+    display: none;
+  }
+  #logo-bottom {
+    display: inline-block;
+    height: 120px;
+    position: fixed;
+    bottom: 60px;
+    transform: translate(-50%, 0);
+  }
+  #toggle:checked + ul {
+    right: 0;
+  }
+}
+
+@media only screen and (max-height: 580px) {
+  #logo-bottom {
+    height: 90px;
+    bottom: 30px;
+  }
+}
+@media only screen and (max-width: 199px) {
+  #logo-bottom {
+    display: none;
+  }
+}
+@media only screen and (max-height: 500px) {
+  #logo-bottom {
+    display: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
