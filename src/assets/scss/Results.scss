@@ -1,0 +1,13 @@
+.results {
+  display: grid;
+  grid-template-columns:
+    [full-start]
+    minmax(2rem, 0.2fr)
+    [center-start]
+    repeat(4, 1fr)
+    [center-end]
+    minmax(2rem, 0.2fr)
+    [full-end];
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
